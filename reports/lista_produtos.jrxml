@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="lista_produtos" language="groovy" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="bc8a12b1-9b7f-49ad-8aa6-b2beb10810dd">
+	<property name="ireport.zoom" value="1.1000000000000005"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="13"/>
+	<parameter name="N_Venda" class="java.lang.Integer">
+		<defaultValueExpression><![CDATA[]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[SELECT * FROM Forro;]]>
+	</queryString>
+	<field name="Codigo_Forro" class="java.lang.Object"/>
+	<field name="Codigo_Fornecedor" class="java.lang.Object"/>
+	<field name="Nome_Forro" class="java.lang.Object"/>
+	<field name="Cor" class="java.lang.Object"/>
+	<field name="Descricao" class="java.lang.Object"/>
+	<field name="Tamanho_Peca" class="java.lang.Object"/>
+	<field name="Quantidade_Pecas" class="java.lang.Object"/>
+	<field name="Quantidade_Metro2" class="java.lang.Object"/>
+	<field name="Valor_M2" class="java.lang.Object"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<image>
+				<reportElement x="0" y="11" width="555" height="68" uuid="66014b1c-dcd8-45f5-9eac-958ffc80b52a"/>
+				<imageExpression><![CDATA["C:\\Users\\Jona\\Pictures\\topo.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="36" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="555" height="35" uuid="4f43c4f9-e20f-4c00-8773-59ff5ab58e95"/>
+				<textElement textAlignment="Center">
+					<font fontName="Open Sans" size="20"/>
+				</textElement>
+				<text><![CDATA[Lista de Produtos]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="28" splitType="Stretch">
+			<staticText>
+				<reportElement x="1" y="8" width="37" height="20" uuid="3de81e92-3bcf-43a9-a1a3-699868137b7b"/>
+				<text><![CDATA[Produto]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="101" y="8" width="37" height="20" uuid="cd3a9c5c-818b-421e-af67-4ab626928352"/>
+				<text><![CDATA[Cor]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="157" y="8" width="83" height="20" uuid="7d7d9529-b9d9-4301-8c99-2018b74c850b"/>
+				<text><![CDATA[Tamanho da Peça]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="250" y="8" width="116" height="20" uuid="f8fec4f5-ec8c-46d4-ba4c-9fb905659fd3"/>
+				<text><![CDATA[Qtd Disponivel em Peças]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="377" y="8" width="100" height="20" uuid="c8c215e1-f2bc-40f5-a5c4-704c19777585"/>
+				<text><![CDATA[Qtd Disponivel em M²]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="488" y="8" width="67" height="20" uuid="cd3a5a64-187d-4e0a-bca7-faaab9ef17da"/>
+				<text><![CDATA[Valor R$ M²]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="21" splitType="Stretch">
+			<textField>
+				<reportElement x="1" y="0" width="100" height="20" uuid="e3ce5ef7-9386-43ca-a51a-609356825642"/>
+				<textFieldExpression><![CDATA[""+$F{Nome_Forro}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="101" y="1" width="56" height="20" uuid="f93e674e-16b9-455c-a25c-f856fc86582e"/>
+				<textFieldExpression><![CDATA[""+$F{Cor}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="167" y="1" width="73" height="20" uuid="85531b64-c80b-4a00-9bfc-705d586e2452"/>
+				<textFieldExpression><![CDATA[""+$F{Tamanho_Peca}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="250" y="1" width="100" height="20" uuid="3f308d03-8807-4d43-9d34-1c97bbcc1bec"/>
+				<textFieldExpression><![CDATA[""+$F{Quantidade_Pecas}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="377" y="1" width="100" height="20" uuid="b9981b2b-900b-463f-9beb-4d5f70310e7e"/>
+				<textFieldExpression><![CDATA[""+$F{Quantidade_Metro2}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="488" y="1" width="67" height="20" uuid="56527c6b-5e29-4a16-8c29-417475c9d6f8"/>
+				<textFieldExpression><![CDATA[""+$F{Valor_M2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<textField>
+				<reportElement x="455" y="34" width="100" height="20" uuid="00ec27ed-b3ab-4dad-acab-35fdd7d2684f"/>
+				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

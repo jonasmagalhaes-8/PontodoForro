@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="bibliotecas">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bibliotecas/sqlite-jdbc-3.15.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bibliotecas/commons-net-3.1-ntp-only.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bibliotecas/rs2xml.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,6 @@
+SELECT * FROM Vendas
+INNER JOIN Clientes ON Clientes.Codigo_Cliente = Vendas.Codigo_cliente
+INNER JOIN Telefones_Cliente ON Clientes.Codigo_Cliente = Telefones_Cliente.Codigo_Cliente
+INNER JOIN Endereco_Cliente ON Clientes.Codigo_Cliente = Endereco_Cliente.Codigo_Cliente
+INNER JOIN Forro ON Forro.Codigo_Forro = Vendas.Codigo_Forro
+where N_Venda = $P{N_Venda}
